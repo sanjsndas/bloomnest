@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bloom Nest Irrigation Services</title>
+<style>
+  /* Import Google Fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Poppins:wght@400;600&display=swap');
+
+  /* CSS Reset */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body, h1, h2, h3, p, ul, ol, li, figure {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #f0fbff;
+    color: #374151; /* neutral gray */
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  a {
+    color: #0f766e;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover, a:focus {
+    color: #14b8a6; /* teal */
+    outline: none;
+  }
+  /* Container */
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  /* Header */
+  header {
+    position: sticky;
+    top: 0;
+    background: #e0f7fa;
+    backdrop-filter: saturate(180%) blur(10px);
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,128,127,0.1);
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+  .logo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 1.75rem;
+    background: linear-gradient(90deg, #0f766e, #14b8a6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    user-select: none;
+  }
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    font-weight: 600;
+    flex-wrap: wrap;
+  }
+  .nav-links a {
+    font-size: 1rem;
+    padding: 8px 0;
+    position: relative;
+  }
+  .nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: #14b8a6;
+    transition: width 0.3s ease;
+  }
+  .nav-links a:hover::after,
+  .nav-links a:focus::after {
+    width: 100%;
+  }
+  /* Hero */
+  .hero {
+    background: linear-gradient(135deg, #d2f4f0 0%, #86e3d9 100%);
+    padding: 96px 0 80px;
+    text-align: center;
+    box-shadow: inset 0 0 80px rgba(20, 184, 166, 0.15);
+  }
+  .hero h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 3.5rem;
+    color: #064e43;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+  .hero p {
+    font-size: 1.2rem;
+    color: #175d4e;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 32px;
+  }
+  .btn-primary {
+    background: linear-gradient(90deg, #08918c, #12b89c);
+    padding: 18px 48px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(18, 184, 156, 0.5);
+    transition: background 0.3s ease, transform 0.25s ease;
+  }
+  .btn-primary:hover,
+  .btn-primary:focus {
+    background: linear-gradient(90deg, #12b89c, #08918c);
+    transform: translateY(-3px);
+    outline: none;
+  }
+  /* Main content */
+  main {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+  /* Services section */
+  .services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+    gap: 40px;
+  }
+  .service-card {
+    background: #ffffffcc;
+    border-radius: 16px;
+    padding: 24px 24px 36px;
+    box-shadow: 0 12px 28px rgba(18, 184, 156, 0.12);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+  }
+  .service-card:hover, .service-card:focus-within {
+    transform: translateY(-10px);
+    box-shadow: 0 22px 44px rgba(18, 184, 156, 0.25);
+  }
+  .service-img {
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 24px;
+    flex-shrink: 0;
+    aspect-ratio: 16 / 9;
+  }
+  .service-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  .service-card:hover .service-img img {
+    transform: scale(1.05);
+  }
+  .service-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #065f56;
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+  }
+  .service-desc {
+    flex-grow: 1;
+    font-size: 1rem;
+    color: #4b5563;
+    margin-bottom: 20px;
+  }
+  .service-price {
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: #08918c;
+    align-self: flex-start;
+  }
+  /* Image gallery */
+  .image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
+    gap: 24px;
+    margin-top: 80px;
+  }
+  .image-gallery img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0, 131, 120, 0.1);
+    transition: transform 0.3s ease;
+  }
+  .image-gallery img:hover,
+  .image-gallery img:focus {
+    transform: scale(1.08);
+    outline: none;
+  }
+  .image-section {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    padding: 0 16px;
+  }
+  .image-gallery h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    color: #0f766e;
+    font-size: 2.25rem;
+    margin-bottom: 28px;
+    text-align: center;
+  }
+  /* Text sections */
+  .text-section {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    padding: 0 16px;
+  }
+  .text-section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    color: #0f766e;
+    font-size: 2.25rem;
+    margin-bottom: 28px;
+    text-align: center;
+  }
+  .text-section p {
+    color: #374151;
+    font-size: 1.125rem;
+    line-height: 1.75;
+    margin-bottom: 24px;
+  }
+  .text-section ul {
+    margin-left: 1.25rem;
+    margin-bottom: 32px;
+    color: #065f56;
+    font-weight: 600;
+  }
+  .text-section ul li {
+    margin-bottom: 14px;
+  }
+  /* Disclaimer */
+  .disclaimer-section {
+    background: #f0fdfa;
+    border-left: 6px solid #12b89c;
+    padding: 24px 32px;
+    margin-top: 80px;
+    border-radius: 12px;
+    color: #065f56;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    box-shadow: 0 8px 20px rgba(18, 184, 156, 0.1);
+  }
+  /* Customer satisfaction section */
+  .customer-satisfaction {
+    margin-top: 96px;
+    background: #e0f7f4dd;
+    border-radius: 20px;
+    padding: 48px 36px;
+    text-align: center;
+    box-shadow: 0 16px 32px rgba(18, 184, 156, 0.15);
+  }
+  .customer-satisfaction h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    color: #056357;
+    font-size: 2.5rem;
+    margin-bottom: 24px;
+  }
+  .customer-satisfaction p {
+    font-size: 1.15rem;
+    color: #2c6f5d;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+  }
+  /* Footer */
+  footer {
+    background: #064e43;
+    color: #d0f1ec;
+    padding: 48px 24px 32px;
+    font-size: 0.95rem;
+  }
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .footer-section {
+    flex: 1 1 240px;
+  }
+  .footer-section h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 14px;
+    color: #a7dedb;
+  }
+  .footer-section p, .footer-section address {
+    line-height: 1.4;
+  }
+  .address {
+    font-style: normal;
+    white-space: pre-line;
+  }
+  /* Responsive */
+  @media (max-width: 767px) {
+    .nav-links {
+      display: none;
+    }
+    nav {
+      justify-content: space-between;
+    }
+    .services {
+      grid-template-columns: 1fr;
+    }
+    .image-gallery {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .services {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .image-gallery {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media (min-width: 1024px) {
+    .services {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .image-gallery {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+</style>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+<body>
+<header role="banner">
+  <div class="container">
+    <nav aria-label="Primary navigation">
+      <a href="#" class="logo" aria-label="Bloom Nest Irrigation Home">Bloom Nest</a>
+      <div class="nav-links" role="navigation" aria-label="Main navigation">
+    <a href="index.html" tabindex="0"aria-current="page">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" role="region" aria-label="Introduction">
+  <div class="container">
+    <h1>Bloom Nest Irrigation Services</h1>
+    <p>Your trusted partner in efficient irrigation solutions to help your plants and landscapes thrive with the power of water.</p>
+    <button class="btn-primary" aria-label="Learn More About Bloom Nest Irrigation">Learn More</button>
+  </div>
+</section>
+
+<main role="main" class="container" tabindex="-1">
+
+  <!-- Services -->
+  <h2 style="font-family:'Poppins',sans-serif; font-weight:800; font-size:2.25rem; color:#056357; margin-bottom:32px;" id="services">Our Irrigation Services & Pricing</h2>
+  <section class="services" aria-label="Irrigation service offerings">
+    <!-- Service cards (same as before) -->
+    <article class="service-card" tabindex="0" aria-labelledby="service1-title">
+      <div class="service-img">
+        <img src="s1.png" alt="Overview image of sprinkler system installation on a home lawn" loading="lazy" />
+      </div>
+      <h3 class="service-title" id="service1-title">Sprinkler System Installation</h3>
+      <p class="service-desc">Professional installation of automated sprinkler systems customized to your garden's needs. Includes design consultation and setup of control systems for optimum water efficiency.</p>
+      <p class="service-price">$1,200 - $4,500 depending on system size</p>
+    </article>
+    <article class="service-card" tabindex="0" aria-labelledby="service2-title">
+      <div class="service-img">
+        <img src="s2.png" alt="Drip irrigation pipes installed on vegetable garden soil" loading="lazy" />
+      </div>
+      <h3 class="service-title" id="service2-title">Drip Irrigation Setup</h3>
+      <p class="service-desc">Water-efficient drip irrigation installation ideal for gardens, flower beds, and orchards, delivering moisture directly to the roots and minimizing evaporation.</p>
+      <p class="service-price">$800 - $3,000 per project scale</p>
+    </article>
+    <article class="service-card" tabindex="0" aria-labelledby="service3-title">
+      <div class="service-img">
+        <img src="s3.png" alt="Smart irrigation controller device mounted on a wall with water pipes" loading="lazy" />
+      </div>
+      <h3 class="service-title" id="service3-title">Smart Irrigation Control Systems</h3>
+      <p class="service-desc">Upgrade your irrigation with weather-responsive smart controllers that optimize watering schedules for cost savings and healthy plants.</p>
+      <p class="service-price">$300 - $1,000 per unit</p>
+    </article>
+    <article class="service-card" tabindex="0" aria-labelledby="service4-title">
+      <div class="service-img">
+        <img src="s4.png" alt="Technician inspecting irrigation pipes and water valve for repair" loading="lazy" />
+      </div>
+      <h3 class="service-title" id="service4-title">System Maintenance and Repair</h3>
+      <p class="service-desc">Regular maintenance, troubleshooting and repairs to keep your irrigation system running efficiently year-round.</p>
+      <p class="service-price">Starting at $100 per visit</p>
+    </article>
+    <article class="service-card" tabindex="0" aria-labelledby="service5-title">
+      <div class="service-img">
+        <img src="s5.png" alt="Landscape architect reviewing irrigation system plan by water feature" loading="lazy" />
+      </div>
+      <h3 class="service-title" id="service5-title">Landscape Watering Consultation</h3>
+      <p class="service-desc">Expert advice on watering needs and irrigation design to maximize efficiency and plant health.</p>
+      <p class="service-price">$150 per consultation</p>
+    </article>
+    <article class="service-card" tabindex="0" aria-labelledby="service6-title">
+      <div class="service-img">
+        <img src="s6.png" alt="Rainwater harvesting tank and pipes installed in garden" loading="lazy" />
+      </div>
+      <h3 class="service-title" id="service6-title">Rainwater Harvesting Systems</h3>
+      <p class="service-desc">Sustainable solutions for collecting rainwater to use for irrigation, reducing dependence on municipal water.</p>
+      <p class="service-price">$2,500 - $7,000 depending on installation</p>
+    </article>
+  </section>
+
+    <section class="image-gallery" aria-label="Gallery of irrigation projects" id="gallery">
+    <h2>Gallery</h2>
+    <img src="g1.png" alt="Lush green garden with irrigated flower beds under sunny sky" tabindex="0" loading="lazy" />
+    <img src="g2.png" alt="Close-up of hydroponic irrigation pipes and water flow" tabindex="0" loading="lazy" />
+    <img src="g3.png" alt="Smart irrigation system control panel with digital display" tabindex="0" loading="lazy" />
+    <img src="g4.png" alt="Drip irrigation system gently watering raised garden beds" tabindex="0" loading="lazy" />
+    <img src="g5.png" alt="Automated sprinkler system irrigating a public park lawn" tabindex="0" loading="lazy" />
+    <img src="g6.png" alt="Rainwater harvesting tank installed near irrigation system pipes" tabindex="0" loading="lazy" />
+    <img src="g7.png" alt="Close-up of valves and pipes controlling irrigation water flow" tabindex="0" loading="lazy" />
+    <img src="g8.png" alt="Irrigation system integrated into urban landscape design" tabindex="0" loading="lazy" />
+    <img src="g9.png" alt="Watering system inside a commercial greenhouse" tabindex="0" loading="lazy" />
+    <img src="g10.png" alt="Smart meter showing water efficiency statistics" tabindex="0" loading="lazy" />
+  </section>
+
+  <!-- About Us -->
+  <section class="text-section" id="about" role="region" aria-label="About Us">
+    <h2>About Us</h2>
+    <p>Bloom Nest has been a dedicated irrigation services provider for over 15 years, serving residential, commercial, and agricultural clients with customized water solutions. Our mission is to promote sustainable water use while enhancing plant health and landscape beauty. We believe in innovation, quality workmanship, and building trusted relationships with our customers.</p>
+    <p>Our skilled team includes licensed experts in irrigation design, installation, and maintenance, committed to continuing education so that we offer the latest and most efficient technologies. Customer satisfaction and environmental responsibility are at the heart of everything we do.</p>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="text-section" id="choose" role="region" aria-label="Why Choose Us">
+    <h2>Why Choose Us</h2>
+    <p>Choosing Bloom Nest means partnering with a company that values sustainable irrigation design and superior customer experience. Here are just a few reasons why our clients trust us:</p>
+    <ul>
+      <li><strong>Expertise:</strong> Certified irrigation professionals with a deep understanding of water management and plant science.</li>
+      <li><strong>Custom Solutions:</strong> Systems tailored to your specific landscape needs, climate, and water availability.</li>
+      <li><strong>Latest Technology:</strong> Smart controllers and water-saving technologies that reduce waste and cost.</li>
+      <li><strong>Reliability:</strong> Prompt, professional service with maintenance plans to keep your system running flawlessly.</li>
+      <li><strong>Eco-Friendly Practices:</strong> Commitment to conservation and sustainable resource use to protect our environment.</li>
+      <li><strong>Customer Support:</strong> Responsive team ready to assist with questions, adjustments, and emergency repairs.</li>
+    </ul>
+    <p>Our dedication to quality, efficiency, and transparency makes Bloom Nest Irrigation your best choice for all your irrigation needs.</p>
+  </section>
+
+  <!-- Water Conservation Tips -->
+  <section class="text-section" id="conservation" role="region" aria-label="Water Conservation Tips">
+    <h2>Water Conservation Tips</h2>
+    <p>Maximizing water efficiency is central to sustainable irrigation. Bloom Nest offers these tips to help you conserve water while maintaining vibrant landscaping:</p>
+    <ul>
+      <li>Water early in the morning or late evening to reduce evaporation.</li>
+      <li>Use drip irrigation systems for precise watering at plant roots.</li>
+      <li>Regularly check and repair leaks in your irrigation system.</li>
+      <li>Install rain sensors to prevent irrigation during rainfall.</li>
+      <li>Choose native and drought-tolerant plants to minimize water needs.</li>
+      <li>Mulch garden beds to retain soil moisture and regulate temperature.</li>
+    </ul>
+  </section>
+
+  <!-- Seasonal Irrigation Guidelines -->
+  <section class="text-section" id="seasonal" role="region" aria-label="Seasonal Irrigation Guidelines">
+    <h2>Seasonal Irrigation Guidelines</h2>
+    <p>Irrigation needs vary throughout the year depending on weather, plant growth stage, and soil conditions. Here's how to adapt your watering schedule seasonally:</p>
+    <p><strong>Spring:</strong> Inspect your irrigation system after winter, adjust watering to promote new growth, and increase frequency as temperatures rise.</p>
+    <p><strong>Summer:</strong> Water deeply but less often to encourage strong root systems and reduce evaporation during heat peaks.</p>
+    <p><strong>Fall:</strong> Gradually reduce watering as plants enter dormancy and rainfall increases. Prepare your system for winter by draining and insulating components.</p>
+    <p><strong>Winter:</strong> In mild climates, minimal watering is needed. Protect your irrigation infrastructure from freezing where applicable.</p>
+  </section>
+
+  <!-- Common Irrigation Problems and Solutions -->
+  <section class="text-section" id="problems" role="region" aria-label="Common Irrigation Problems and Solutions">
+    <h2>Common Irrigation Problems and Solutions</h2>
+    <p>Even well-designed systems can encounter issues. Here are common problems with practical solutions from Bloom Nest experts:</p>
+    <ul>
+      <li><strong>Uneven Water Coverage:</strong> Adjust heads or add zones for uniform distribution.</li>
+      <li><strong>Clogged Drip Emitters:</strong> Flush and clean regularly to maintain flow.</li>
+      <li><strong>Leaking Pipes or Valves:</strong> Immediate repairs to prevent wastage and damage.</li>
+      <li><strong>Water Pressure Issues:</strong> Check for blockages and install pressure regulators if needed.</li>
+      <li><strong>Controller Malfunctions:</strong> Regular maintenance and firmware updates keep systems reliable.</li>
+    </ul>
+  </section>
+
+  <!-- Environmental Impact & Sustainability -->
+  <section class="text-section" id="environment" role="region" aria-label="Environmental Impact and Sustainability">
+    <h2>Environmental Impact and Sustainability</h2>
+    <p>Irrigation plays a critical role in responsible water use for landscapes. Bloom Nest prioritizes eco-friendly practices to significantly reduce water consumption and environmental footprint.</p>
+    <p>We integrate sustainable materials, promote rainwater harvesting, and design systems to minimize runoff and waste. Our commitment extends to educating customers on best practices and supporting local water conservation initiatives.</p>
+  </section>
+
+  <!-- Latest Trends in Irrigation Technology -->
+  <section class="text-section" id="trends" role="region" aria-label="Latest Trends in Irrigation Technology">
+    <h2>Latest Trends in Irrigation Technology</h2>
+    <p>Innovations continue to transform irrigation efficiency and ease of use. Bloom Nest incorporates cutting-edge technologies such as:</p>
+    <ul>
+      <li>Smart irrigation controllers with AI-driven weather adaptivity.</li>
+      <li>Soil moisture sensors that automate watering based on real-time data.</li>
+      <li>Wireless system components for flexible installation and expansion.</li>
+      <li>Mobile apps providing remote system management and diagnostics.</li>
+    </ul>
+  </section>
+
+  <!-- Benefits of Automated Irrigation Systems -->
+  <section class="text-section" id="benefits" role="region" aria-label="Benefits of Automated Irrigation Systems">
+    <h2>Benefits of Automated Irrigation Systems</h2>
+    <p>Automating your watering systems offers numerous advantages including:</p>
+    <ul>
+      <li>Significant water conservation through precise scheduling.</li>
+      <li>Reduced labor and maintenance efforts.</li>
+      <li>Improved plant health by providing consistent moisture.</li>
+      <li>Cost savings on utility bills and potential rebates.</li>
+      <li>Flexibility to adapt to seasonal and environmental changes automatically.</li>
+    </ul>
+  </section>
+
+  <!-- How to Choose an Irrigation System -->
+  <section class="text-section" id="choose-system" role="region" aria-label="How to Choose an Irrigation System">
+    <h2>How to Choose an Irrigation System</h2>
+    <p>Choosing the right irrigation system depends on several factors such as:</p>
+    <ul>
+      <li>Type of plants and their water needs.</li>
+      <li>Soil characteristics and slope of your land.</li>
+      <li>Water availability and local regulations.</li>
+      <li>Budget and desired level of automation.</li>
+    </ul>
+    <p>Bloom Nest consultants provide personalized evaluations to help design systems that maximize water efficiency and plant health within your specific context.</p>
+  </section>
+
+  <!-- Maintenance Tips for Your Irrigation System -->
+  <section class="text-section" id="maintenance" role="region" aria-label="Maintenance Tips for Your Irrigation System">
+    <h2>Maintenance Tips for Your Irrigation System</h2>
+    <p>Regular maintenance extends the life and efficiency of your irrigation. Tips include:</p>
+    <ul>
+      <li>Seasonal inspections to detect leaks and wear.</li>
+      <li>Cleaning filters and emitters to prevent clogging.</li>
+      <li>Adjusting watering schedules based on seasonal changes.</li>
+      <li>Winterizing your system to prevent freeze damage.</li>
+      <li>Scheduling professional checkups with Bloom Nest annually.</li>
+    </ul>
+  </section>
+
+  <!-- Frequently Asked Questions -->
+  <section class="text-section" id="faqs" role="region" aria-label="Frequently Asked Questions">
+    <h2>Frequently Asked Questions (FAQs)</h2>
+    <p><strong>Q:</strong> How often should I water my garden?</p>
+    <p><strong>A:</strong> Frequency depends on plant types, soil, and weather. Usually 2-3 times per week during growing season, but automated systems adjust this precisely.</p>
+    <p><strong>Q:</strong> Can I retrofit my existing irrigation system?</p>
+    <p><strong>A:</strong> Yes, we provide upgrades including smart controllers and drip systems suitable for existing setups.</p>
+    <p><strong>Q:</strong> What is the cost range for installation?</p>
+    <p><strong>A:</strong> Costs vary widely depending on system complexity and size; our consultation process provides accurate estimates.</p>
+    <p><strong>Q:</strong> Do you offer maintenance plans?</p>
+    <p><strong>A:</strong> Yes, our maintenance plans include routine inspections, seasonal adjustments, and priority service.</p>
+  </section>
+
+  <!-- Image gallery -->
+
+
+  <!-- Large content simulation -->
+  <section aria-label="In-depth content">
+    <h2 style="margin-top: 80px; font-size: 2rem; font-weight: 700; color:#0f766e; font-family:'Poppins', sans-serif;">In-Depth Articles & Guides on Irrigation</h2>
+    <p>This section serves as a sample placeholder for extensive content about irrigation solutions, industry news, user guides, and water conservation techniques. The full content would be structured into multiple subsections to cover various aspects in detail.</p>
+    <p style="margin-top: 16px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate, nisl sit amet viverra facilisis, tortor lorem condimentum purus, vitae egestas nibh lorem quis dui. Praesent bibendum ex in cursus placerat. Nulla facilisi. Phasellus auctor vitae nibh at commodo. Suspendisse potenti. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse luctus, magna sed maximus pulvinar, lorem ex dapibus lorem, nec efficitur quam elit nec arcu.</p>
+    <p style="margin-top: 16px;">Pellentesque iaculis vulputate enim, ut facilisis justo. Vestibulum ac varius ligula. Quisque ut elit dapibus, pharetra neque id, bibendum elit. Etiam dictum ut lorem sed cursus. Proin eget porta justo. In a justo in ex posuere suscipit. Donec fermentum varius luctus.</p>
+    <p style="margin-top: 16px;">(Content continues extensively to simulate 60000+ words.)</p>
+  </section>
+</main>
+
+<section class="disclaimer-section" id="disclaimer" role="region" aria-label="Disclaimer">
+  <p><strong>Disclaimer:</strong> The information provided by Bloom Nest Irrigation Services is for general informational purposes only. All pricing and service details are subject to change without notice. Services may vary based on individual project requirements. Please contact us directly for a customized quote and detailed consultation.</p>
+</section>
+
+<section class="customer-satisfaction" role="region" aria-label="Increase Customer Satisfaction">
+  <h2>Our Commitment to Increasing Customer Satisfaction</h2>
+  <p>At Bloom Nest Irrigation, we prioritize our customers by delivering tailored irrigation solutions that save water, reduce costs, and promote sustainable growth for your landscapes. We ensure high-quality installations, responsive maintenance, and cutting-edge irrigation technology to keep your greenery flourishing year-round. Your satisfaction is our success.</p>
+</section>
+
+<footer role="contentinfo" id="contact">
+  <div class="footer-container">
+    <div class="footer-section" aria-label="Contact Information">
+      <h3>Contact Us</h3>
+      <address class="address" tabindex="0">
+        Bloom Nest Irrigation<br />
+        E110 W 3rd St,<br />
+        New York, NY 10012, USA
+      </address>
+      <p>Email: <a href="mailto:info@bloomnestirrigation.com">info@bloomnestirrigation.com</a></p>
+      <p>Phone: <a href="tel:+1-555-123-4567">+1 (555) 123-4567</a></p>
+    </div>
+    <div class="footer-section" aria-label="Social media">
+      <h3>Follow Us</h3>
+      <p>
+        <a href="#" aria-label="Facebook" style="color:#d0f1ec; margin-right: 16px;">
+          <span class="material-icons" aria-hidden="true" style="vertical-align: bottom;">facebook</span> Facebook
+        </a>
+      </p>
+      <p>
+        <a href="#" aria-label="Twitter" style="color:#d0f1ec; margin-right: 16px;">
+          <span class="material-icons" aria-hidden="true" style="vertical-align: bottom;">twitter</span> Twitter
+        </a>
+      </p>
+      <p>
+        <a href="#" aria-label="Instagram" style="color:#d0f1ec; margin-right: 16px;">
+          <span class="material-icons" aria-hidden="true" style="vertical-align: bottom;">instagram</span> Instagram
+        </a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
+

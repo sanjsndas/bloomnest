@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bloom Nest Irrigation Services - Cookies Policy</title>
+<style>
+  /* Import Google Fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Poppins:wght@400;600&display=swap');
+
+  /* CSS Reset */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body, h1, h2, h3, p, ul, ol, li, figure {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #f0fbff;
+    color: #374151;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+    padding-bottom: 100px; /* Space for cookie dialog */
+  }
+  a {
+    color: #0f766e;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover, a:focus {
+    color: #14b8a6;
+    outline: none;
+  }
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  header {
+    position: sticky;
+    top: 0;
+    background: #e0f7fa;
+    backdrop-filter: saturate(180%) blur(10px);
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,128,127,0.1);
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+  .logo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 1.75rem;
+    background: linear-gradient(90deg, #0f766e, #14b8a6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    user-select: none;
+  }
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    font-weight: 600;
+    flex-wrap: wrap;
+  }
+  .nav-links a {
+    font-size: 1rem;
+    padding: 8px 0;
+    position: relative;
+  }
+  .nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: #14b8a6;
+    transition: width 0.3s ease;
+  }
+  .nav-links a:hover::after,
+  .nav-links a:focus::after {
+    width: 100%;
+  }
+  .hero {
+    background: linear-gradient(135deg, #d2f4f0 0%, #86e3d9 100%);
+    padding: 96px 0 80px;
+    text-align: center;
+    box-shadow: inset 0 0 80px rgba(20, 184, 166, 0.15);
+  }
+  .hero h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 3.5rem;
+    color: #064e43;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+  .hero p {
+    font-size: 1.2rem;
+    color: #175d4e;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 32px;
+  }
+  main {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+  .cookies-container {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 24px;
+  }
+  h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #0f766e;
+  }
+  h2 {
+    font-weight: 800;
+    font-size: 2.5rem;
+    margin-bottom: 32px;
+    text-align: center;
+  }
+  h3 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-top: 30px;
+    margin-bottom: 14px;
+  }
+  p, li {
+    font-size: 1.125rem;
+    color: #374151;
+    line-height: 1.75;
+    margin-bottom: 20px;
+  }
+  ol {
+    padding-left: 1.5rem;
+  }
+  li {
+    margin-bottom: 24px;
+  }
+  footer {
+    background: #064e43;
+    color: #d0f1ec;
+    padding: 48px 24px 32px;
+    font-size: 0.95rem;
+  }
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .footer-section {
+    flex: 1 1 240px;
+  }
+  .footer-section h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 14px;
+    color: #a7dedb;
+  }
+  .footer-section p, .footer-section address {
+    line-height: 1.4;
+  }
+  .address {
+    font-style: normal;
+    white-space: pre-line;
+  }
+  /* Cookie consent dialog */
+  #cookie-consent {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(15, 118, 110, 0.95);
+    color: white;
+    padding: 24px 32px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    font-size: 1rem;
+    z-index: 1100;
+  }
+  #cookie-consent p {
+    flex: 1 1 300px;
+    margin: 0;
+  }
+  #cookie-consent button {
+    background: none;
+    border: 2px solid #a7dedb;
+    color: #a7dedb;
+    font-weight: 700;
+    padding: 10px 24px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  #cookie-consent button:hover,
+  #cookie-consent button:focus {
+    background: #a7dedb;
+    color: #064e43;
+    outline: none;
+  }
+  #cookie-consent button.accept {
+    border-color: #14b8a6;
+    color: #14b8a6;
+  }
+  #cookie-consent button.accept:hover,
+  #cookie-consent button.accept:focus {
+    background: #14b8a6;
+    color: white;
+  }
+  @media (max-width: 767px) {
+    .nav-links {
+      display: none;
+    }
+    nav {
+      justify-content: space-between;
+    }
+    main {
+      padding: 32px 8px;
+    }
+    #cookie-consent {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    #cookie-consent button {
+      width: 100%;
+      text-align: center;
+    }
+  }
+</style>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+<body>
+<header role="banner">
+  <div class="container">
+    <nav aria-label="Primary navigation">
+      <a href="index.html" class="logo" aria-label="Bloom Nest Irrigation Home">Bloom Nest</a>
+      <div class="nav-links" role="navigation" aria-label="Main navigation">
+   <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0"aria-current="page">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" role="region" aria-label="Cookies Policy Introduction">
+  <div class="container">
+    <h1>Cookies Policy</h1>
+    <p>Learn about how Bloom Nest Irrigation uses cookies and similar technologies to enhance your experience on our website and services.</p>
+  </div>
+</section>
+
+<main role="main" class="container cookies-container" tabindex="-1" aria-label="Detailed Cookies Policy Content">
+  <h2>Detailed Cookies Policy</h2>
+  <ol>
+    <li>
+      <h3>Introduction to Cookies</h3>
+      <p>Cookies are small text files stored on your device by websites you visit. Bloom Nest uses cookies to improve website functionality, analyze traffic, and provide personalized experiences tailored to your preferences.</p>
+    </li>
+    <li>
+      <h3>Types of Cookies We Use</h3>
+      <p>We employ different categories of cookies: essential cookies needed for website operation; performance cookies that help us analyze usage; functionality cookies to remember your preferences; and advertising cookies for marketing.</p>
+    </li>
+    <li>
+      <h3>Essential Cookies</h3>
+      <p>These cookies are crucial to enable core website features like security, login sessions, and accessibility functions. Without them, the site may not work properly.</p>
+    </li>
+    <li>
+      <h3>Performance Cookies</h3>
+      <p>Performance cookies help us understand how visitors interact with our site by collecting anonymous data like page visits and load times. This data is used exclusively to improve our services.</p>
+    </li>
+    <li>
+      <h3>Functionality Cookies</h3>
+      <p>Functionality cookies remember your choices such as language preferences or region, enhancing your browsing experience and customizing content accordingly.</p>
+    </li>
+    <li>
+      <h3>Advertising Cookies</h3>
+      <p>Advertising cookies track your browsing habits to display relevant advertisements. We do not allow third-party advertising cookies without your explicit consent.</p>
+    </li>
+    <li>
+      <h3>Third-Party Cookies</h3>
+      <p>Some cookies are set by external services integrated into our website, such as analytics or social media platforms. We review third-party practices to ensure user privacy but cannot guarantee their privacy policies.</p>
+    </li>
+    <li>
+      <h3>How We Use Cookies</h3>
+      <p>Cookies enable us to authenticate users, remember site preferences, analyze user behavior, and target marketing efforts responsibly to serve our customers better.</p>
+    </li>
+    <li>
+      <h3>Your Cookie Consent</h3>
+      <p>Upon first visiting our site, you will see a cookies consent banner. You may accept or decline non-essential cookies. We respect your preferences and adjust tracking accordingly.</p>
+    </li>
+    <li>
+      <h3>Managing Cookie Preferences</h3>
+      <p>You can manage or disable cookies at any time using your browser settings or the consent banner. Disabling certain cookies may affect website functionality or personalization features.</p>
+    </li>
+    <li>
+      <h3>Cookie Storage Duration</h3>
+      <p>The lifespan of cookies varies depending on their function. Some expire at the end of your session, while others remain for months or years to retain your preferences.</p>
+    </li>
+    <li>
+      <h3>Security of Cookies</h3>
+      <p>We use secure technologies and protocols to protect cookies from unauthorized access or tampering, such as using HTTPS to encrypt data in transit.</p>
+    </li>
+    <li>
+      <h3>Cookies and Personal Data</h3>
+      <p>Cookies themselves do not collect personally identifiable information, but they may be linked to data you provide to us. We handle such data in accordance with our Privacy Policy.</p>
+    </li>
+    <li>
+      <h3>Updating Cookie Policy</h3>
+      <p>We may update this Cookies Policy periodically to reflect changes in laws or our practices. Changes will be posted here and notified where appropriate.</p>
+    </li>
+    <li>
+      <h3>Cookie Consent Banner Details</h3>
+      <p>The banner provides clear options to accept or decline cookies. You can revisit your choices anytime by clicking the cookie settings link typically found in the website footer.</p>
+    </li>
+    <li>
+      <h3>Consequences of Declining Cookies</h3>
+      <p>Declining cookies may limit your ability to access certain features or receive personalized content and advertisements on our website.</p>
+    </li>
+    <li>
+      <h3>Cookie Usage in Analytics</h3>
+      <p>We use cookies for web analytics to monitor traffic sources, visitor counts, and behavior patterns to improve our digital presence and service offerings.</p>
+    </li>
+    <li>
+      <h3>Consent for Marketing Cookies</h3>
+      <p>Marketing or advertising cookies are only placed after you provide explicit consent. These cookies enhance the relevance of promotional messages.</p>
+    </li>
+    <li>
+      <h3>Cookie Policy Compliance</h3>
+      <p>Our cookie practices comply with regulations such as GDPR and CCPA to ensure your rights and choices are respected while using our website.</p>
+    </li>
+    <li>
+      <h3>Cookie Preference Storage</h3>
+      <p>Your cookie consent choices are saved using cookies themselves or local storage, allowing your preferences to persist across visits.</p>
+    </li>
+    <li>
+      <h3>Cookie Access by Bloom Nest Staff</h3>
+      <p>Only authorized personnel involved in website management and analytics have access to cookie data, strictly for business purposes and in line with privacy policies.</p>
+    </li>
+    <li>
+      <h3>Third-Party Analytics Providers</h3>
+      <p>We use trusted analytics providers who implement their own privacy regulations and allow you to opt out where applicable.</p>
+    </li>
+    <li>
+      <h3>Cookies on Mobile Devices</h3>
+      <p>Our cookies function consistently across desktop and mobile devices to enhance usability and performance regardless of platform.</p>
+    </li>
+    <li>
+      <h3>Browser Cookie Settings</h3>
+      <p>You may configure your browser to block or delete cookies, but this may affect browsing experience on Bloom Nest and other sites you visit.</p>
+    </li>
+    <li>
+      <h3>Session Cookies</h3>
+      <p>Session cookies are temporary and expire once you close your browser, used for seamless navigation during your visit.</p>
+    </li>
+    <li>
+      <h3>Persistent Cookies</h3>
+      <p>Persistent cookies remain stored on your device until they expire or you delete them, storing preferences and login states for recurring visits.</p>
+    </li>
+    <li>
+      <h3>Cookie Disclosure Transparency</h3>
+      <p>We disclose all types of cookies used on our site and explain their purposes in this policy for full transparency and user control.</p>
+    </li>
+    <li>
+      <h3>Interaction with Cookies by Other Services</h3>
+      <p>Embedded third-party services may use cookies independently; we recommend you review their policies to manage your privacy effectively.</p>
+    </li>
+    <li>
+      <h3>Minimizing Cookie Usage</h3>
+      <p>We only use cookies essential for service delivery and user experience, avoiding unnecessary or intrusive tracking.</p>
+    </li>
+    <li>
+      <h3>Cookie Control Options</h3>
+      <p>The cookie banner and settings page enable granular control over cookie categories such as essential, analytics, and marketing cookies.</p>
+    </li>
+    <li>
+      <h3>Cookie Deletion Effects</h3>
+      <p>Deleting cookies manually may log you out of portals and reset your preferences, requiring reconfiguration on next visits.</p>
+    </li>
+    <li>
+      <h3>Cookie Use for Security</h3>
+      <p>Security cookies help detect unauthorized access attempts and protect your accounts from misuse and fraud.</p>
+    </li>
+    <li>
+      <h3>Cookie Consent Revocation</h3>
+      <p>You can revoke your cookie consent any time using the cookie settings link, after which tracking beyond essential cookies will cease.</p>
+    </li>
+    <li>
+      <h3>Impact of Cookies on Performance</h3>
+      <p>Proper cookie management helps ensure fast loading times and smooth performance of our website and services.</p>
+    </li>
+    <li>
+      <h3>Cookie Policy Updates</h3>
+      <p>Our cookie policy is periodically reviewed and updated. We encourage users to revisit this page for latest information and adjustments.</p>
+    </li>
+    <li>
+      <h3>Cookie Policy Contact Information</h3>
+      <p>For questions or concerns about cookies, please contact us at info@bloomnestirrigation.com or +1 (555) 123-4567.</p>
+    </li>
+    <li>
+      <h3>Cookies in Relation to Other Policies</h3>
+      <p>This policy complements our Privacy Policy, detailing specific use of cookies while both work together to inform you of your privacy rights.</p>
+    </li>
+    <li>
+      <h3>Cookie Use for Personalization</h3>
+      <p>Cookies allow us to remember your preferences and tailor content that matches your interests, improving your user experience on subsequent visits.</p>
+    </li>
+    <li>
+      <h3>Opt-In and Opt-Out Procedures</h3>
+      <p>Visitors are presented with clear opt-in mechanisms for tracking cookies, with easy opt-out options available at any time.</p>
+    </li>
+    <li>
+      <h3>Cookie Data Ownership</h3>
+      <p>Cookie data belongs to you, and we do not claim ownership but rather act as custodians ensuring appropriate use and control.</p>
+    </li>
+    <li>
+      <h3>Cookies Used for Analytics</h3>
+      <p>Analytics cookies gather anonymous insights about user behavior to help us improve content quality, navigation, and services.</p>
+    </li>
+    <li>
+      <h3>Cookies and Advertising Partners</h3>
+      <p>We collaborate with advertising partners who comply with privacy standards and allow user control over targeted ads.</p>
+    </li>
+    <li>
+      <h3>Cross-Site Cookies</h3>
+      <p>We do not use cross-site tracking cookies without explicit consent and ensure compliance with regulatory requirements.</p>
+    </li>
+    <li>
+      <h3>Browser Privacy Features</h3>
+      <p>Modern browsers offer privacy features that can block or restrict cookies. We recommend enabling such features for enhanced privacy.</p>
+    </li>
+    <li>
+      <h3>Cookies on Mobile Apps</h3>
+      <p>Our mobile apps use cookies and similar tracking technologies in line with this policy to offer a consistent experience across devices.</p>
+    </li>
+    <li>
+      <h3>Cookie Implementation Transparency</h3>
+      <p>We strive to provide clear, accessible information about cookie usage directly on our website and within user communications.</p>
+    </li>
+    <li>
+      <h3>Cookie Policy Legal Basis</h3>
+      <p>Our use of cookies is based on your consent and legitimate interests, complying with GDPR and other data protection laws where applicable.</p>
+    </li>
+    <li>
+      <h3>Cookie-Related User Rights</h3>
+      <p>You have the right to request access, restriction, deletion, and portability of data collected via cookies. Contact us for assistance.</p>
+    </li>
+  </ol>
+</main>
+
+<div id="cookie-consent" role="dialog" aria-live="polite" aria-label="Cookie consent banner" aria-modal="true" tabindex="0" hidden>
+  <p>Bloom Nest Irrigation uses cookies to enhance your experience and analyze site traffic. You can accept or decline non-essential cookies.</p>
+  <div>
+    <button class="accept" type="button" aria-label="Accept cookies">Accept</button>
+    <button type="button" aria-label="Decline cookies">Decline</button>
+  </div>
+</div>
+
+<footer role="contentinfo" id="contact">
+  <div class="footer-container">
+    <div class="footer-section" aria-label="Contact Information">
+      <h3>Contact Us</h3>
+      <address class="address" tabindex="0">
+        Bloom Nest Irrigation<br />
+        E110 W 3rd St,<br />
+        New York, NY 10012, USA
+      </address>
+      <p>Email: <a href="mailto:info@bloomnestirrigation.com">info@bloomnestirrigation.com</a></p>
+      <p>Phone: <a href="tel:+1-555-123-4567">+1 (555) 123-4567</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Cookie consent logic
+  (function(){
+    const consent = localStorage.getItem('bloomnest_cookieConsent');
+    const consentDiv = document.getElementById('cookie-consent');
+    const acceptBtn = consentDiv.querySelector('button.accept');
+    const declineBtn = consentDiv.querySelectorAll('button')[1];
+
+    function showConsent() {
+      consentDiv.hidden = false;
+      consentDiv.focus();
+    }
+    function hideConsent() {
+      consentDiv.hidden = true;
+    }
+
+    function setConsent(value) {
+      localStorage.setItem('bloomnest_cookieConsent', value);
+    }
+
+    if(consent !== 'accepted' && consent !== 'declined'){
+      showConsent();
+    }
+
+    acceptBtn.addEventListener('click', function(){
+      setConsent('accepted');
+      hideConsent();
+      // Place for enabling analytics/tracking cookies if needed.
+    });
+
+    declineBtn.addEventListener('click', function(){
+      setConsent('declined');
+      hideConsent();
+      // Place for disabling analytics/tracking cookies if needed.
+    });
+  })();
+</script>
+</body>
+</html>
+

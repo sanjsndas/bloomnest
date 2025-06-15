@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bloom Nest Irrigation Services - Privacy Policy</title>
+<style>
+  /* Import Google Fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Poppins:wght@400;600&display=swap');
+
+  /* CSS Reset */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body, h1, h2, h3, p, ul, ol, li, figure {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #f0fbff;
+    color: #374151; /* neutral gray */
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+  a {
+    color: #0f766e;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover, a:focus {
+    color: #14b8a6; /* teal */
+    outline: none;
+  }
+  /* Container */
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  /* Header */
+  header {
+    position: sticky;
+    top: 0;
+    background: #e0f7fa;
+    backdrop-filter: saturate(180%) blur(10px);
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,128,127,0.1);
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+  .logo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 1.75rem;
+    background: linear-gradient(90deg, #0f766e, #14b8a6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    user-select: none;
+  }
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    font-weight: 600;
+    flex-wrap: wrap;
+  }
+  .nav-links a {
+    font-size: 1rem;
+    padding: 8px 0;
+    position: relative;
+  }
+  .nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: #14b8a6;
+    transition: width 0.3s ease;
+  }
+  .nav-links a:hover::after,
+  .nav-links a:focus::after {
+    width: 100%;
+  }
+  /* Hero */
+  .hero {
+    background: linear-gradient(135deg, #d2f4f0 0%, #86e3d9 100%);
+    padding: 96px 0 80px;
+    text-align: center;
+    box-shadow: inset 0 0 80px rgba(20, 184, 166, 0.15);
+  }
+  .hero h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 3.5rem;
+    color: #064e43;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+  .hero p {
+    font-size: 1.2rem;
+    color: #175d4e;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 32px;
+  }
+  /* Main content */
+  main {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+  .privacy-container {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 24px;
+  }
+  h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #0f766e;
+  }
+  h2 {
+    font-weight: 800;
+    font-size: 2.5rem;
+    margin-bottom: 32px;
+    text-align: center;
+  }
+  h3 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-top: 42px;
+    margin-bottom: 16px;
+  }
+  p, li {
+    font-size: 1.125rem;
+    color: #374151;
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
+  ol {
+    padding-left: 1.5rem;
+  }
+  li {
+    margin-bottom: 20px;
+  }
+  /* Footer */
+  footer {
+    background: #064e43;
+    color: #d0f1ec;
+    padding: 48px 24px 32px;
+    font-size: 0.95rem;
+  }
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .footer-section {
+    flex: 1 1 240px;
+  }
+  .footer-section h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 14px;
+    color: #a7dedb;
+  }
+  .footer-section p, .footer-section address {
+    line-height: 1.4;
+  }
+  .address {
+    font-style: normal;
+    white-space: pre-line;
+  }
+  /* Responsive */
+  @media (max-width: 767px) {
+    .nav-links {
+      display: none;
+    }
+    nav {
+      justify-content: space-between;
+    }
+    main {
+      padding: 32px 8px;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    main {
+      padding: 48px 16px;
+    }
+  }
+  @media (min-width: 1024px) {
+    main {
+      padding: 64px 24px;
+    }
+  }
+</style>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+<body>
+<header role="banner">
+  <div class="container">
+    <nav aria-label="Primary navigation">
+      <a href="index.html" class="logo" aria-label="Bloom Nest Irrigation Home">Bloom Nest</a>
+      <div class="nav-links" role="navigation" aria-label="Main navigation">
+      <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0"aria-current="page">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" role="region" aria-label="Privacy Policy Introduction">
+  <div class="container">
+    <h1>Privacy Policy</h1>
+    <p>Your trust is important to us. This Privacy Policy explains how Bloom Nest Irrigation collects, uses, and protects your personal information when you use our services and website.</p>
+  </div>
+</section>
+
+<main role="main" class="container privacy-container" tabindex="-1" aria-label="Detailed Privacy Policy Content">
+  <h2>Detailed Privacy Policy</h2>
+  <ol>
+    <li>
+      <h3>Information We Collect</h3>
+      <p>We collect information you provide directly to us when you request services, contact customer support, or subscribe to our newsletter. This includes personal details such as your name, email, phone number, and address. Additionally, usage data such as IP addresses, browser type, and pages visited may be collected automatically to improve our service.</p>
+    </li>
+    <li>
+      <h3>Use of Personal Information</h3>
+      <p>Your personal information helps us deliver personalized services, process transactions, communicate updates, and provide customer support. We may also use data to analyze trends, improve our website, and develop new offerings. Your data will never be sold to third parties for marketing purposes without your consent.</p>
+    </li>
+    <li>
+      <h3>Cookies and Tracking Technologies</h3>
+      <p>Our website uses cookies and similar technologies to enhance your experience. Cookies store your preferences, help with login, and track usage patterns anonymously for analytics. You can adjust your browser settings to reject cookies; however, some features of our site may not function properly.</p>
+    </li>
+    <li>
+      <h3>Data Security Measures</h3>
+      <p>We implement strong security protocols including encryption, firewalls, and secure server environments to protect your data against unauthorized access, alteration, disclosure, or destruction. Our employees and contractors are trained on privacy and security best practices to maintain confidentiality.</p>
+    </li>
+    <li>
+      <h3>Third-Party Service Providers</h3>
+      <p>Bloom Nest partners with trusted external providers for web hosting, analytics, payment processing, and marketing. These parties have access only to data necessary for their functions and are obligated to maintain data confidentiality and security. We do not share your personal data with advertisers or unrelated third parties.</p>
+    </li>
+    <li>
+      <h3>User Rights and Choices</h3>
+      <p>You have the right to access, correct, update, or delete your personal information. You can also opt out of marketing communications by following unsubscribe instructions or contacting us directly. We honor your privacy choices and strive to provide transparent control mechanisms.</p>
+    </li>
+    <li>
+      <h3>Children’s Privacy</h3>
+      <p>Our services are not directed toward children under 13, and we do not knowingly collect personal data from minors. If we become aware that a minor has provided personal information, we will take steps to delete this data promptly to comply with applicable laws.</p>
+    </li>
+    <li>
+      <h3>Data Retention Policies</h3>
+      <p>We retain personal information for as long as necessary to provide services, comply with legal obligations, resolve disputes, and enforce agreements. When data is no longer required, we securely dispose of it to protect your privacy.</p>
+    </li>
+    <li>
+      <h3>International Data Transfers</h3>
+      <p>Your data may be stored and processed in countries outside your place of residence, including the United States, which may have different data protection laws. We ensure appropriate safeguards and comply with applicable legal frameworks to protect your personal data during such transfers.</p>
+    </li>
+    <li>
+      <h3>Changes to This Privacy Policy</h3>
+      <p>Bloom Nest may update this Privacy Policy periodically to reflect regulatory changes, service updates, or operational improvements. We encourage you to review it regularly. Continued use of our website or services after any updates constitutes acceptance of the revised policy.</p>
+    </li>
+    <!-- Points 11-45 with detailed explanations -->
+    <li>
+      <h3>Collection of Location Data</h3>
+      <p>Depending on the services you use, we may collect your geographic location information to provide location-based recommendations and localized service support. This data is used only with your consent and is handled according to strict privacy controls to prevent unauthorized use.</p>
+    </li>
+    <li>
+      <h3>Use of Contact Information</h3>
+      <p>Your contact details are used strictly for communication related to service delivery, customer support, and occasional informational newsletters that you can opt out of anytime. We safeguard your contact information and do not distribute it for marketing without permission.</p>
+    </li>
+    <li>
+      <h3>Information Sharing with Affiliates</h3>
+      <p>We may share your data with our affiliated companies solely for purposes consistent with this Privacy Policy. All such data sharing is governed by confidentiality agreements ensuring your personal information remains protected and used responsibly.</p>
+    </li>
+    <li>
+      <h3>Data Collection from Online Forms</h3>
+      <p>When you fill out online forms for inquiries, service requests, or subscriptions, the information entered is transmitted securely and stored on protected servers. We restrict access to this data only to authorized personnel required for processing your requests promptly and accurately.</p>
+    </li>
+    <li>
+      <h3>Usage of Analytics Tools</h3>
+      <p>We use website analytics services to monitor traffic patterns, visitor behavior, and engagement levels. These insights help us optimize website performance and tailor content to your preferences. The data collected is anonymized to protect individual identities and is not sold to third parties.</p>
+    </li>
+    <li>
+      <h3>Social Media Interaction Data</h3>
+      <p>Our website and services may feature social media integration to facilitate sharing and engagement. Any data you provide through such interactions is subject to the privacy policies of the respective social media providers, and Bloom Nest does not claim ownership or control over this data.</p>
+    </li>
+    <li>
+      <h3>Security of Payment Transactions</h3>
+      <p>All payment information is processed securely using compliant third-party providers. We do not store full credit card details on our servers. Your transaction privacy and security are a top priority, and stringent protocols are in place to prevent fraud and unauthorized access.</p>
+    </li>
+    <li>
+      <h3>Protection Against Unauthorized Access</h3>
+      <p>Access to personal data within Bloom Nest is limited to authorized employees who require the information for legitimate business purposes. We employ advanced security services, including intrusion detection, access logs, and regular audits to minimize risks of data breaches.</p>
+    </li>
+    <li>
+      <h3>Privacy Policy Accessibility</h3>
+      <p>This Privacy Policy is available to all visitors at any time on our website and is presented in clear, understandable language. We endeavor to ensure that all users are informed about their privacy rights and Bloom Nest’s data management practices.</p>
+    </li>
+    <li>
+      <h3>Handling Data Breaches</h3>
+      <p>In the unlikely event of a data breach affecting your personal information, Bloom Nest will notify affected parties promptly and work with relevant authorities to mitigate impacts. We have internal procedures aligned with legal requirements for breach management and resolution.</p>
+    </li>
+    <li>
+      <h3>Retention and Archiving of Data</h3>
+      <p>We retain archived data to comply with applicable laws, resolve disputes, and protect our legal interests. Archived data is stored securely and accessed only when necessary under strict protocols to maintain confidentiality and integrity.</p>
+    </li>
+    <li>
+      <h3>Use of Marketing Communications</h3>
+      <p>If you opt in to receive marketing emails or messages, you will have the ability to unsubscribe at any time through provided links or by contacting customer support. Marketing data is managed responsibly in alignment with anti-spam regulations.</p>
+    </li>
+    <li>
+      <h3>User Account Data Management</h3>
+      <p>If you create an account with Bloom Nest, the information stored includes personal details, preferences, transaction history, and communications. You may update or delete your account data by logging into your profile or contacting our support team.</p>
+    </li>
+    <li>
+      <h3>Third-Party Advertising Privacy</h3>
+      <p>Our website may include third-party advertising services that use cookies or tracking technologies to deliver relevant ads. We do not control these third parties and advise users to review their privacy policies for more information on data usage.</p>
+    </li>
+    <li>
+      <h3>Children’s Privacy Protection</h3>
+      <p>Bloom Nest does not knowingly collect data from children under the age of 13. If we become aware that such data has been collected, we will take prompt actions to delete it and prevent further collection moving forward.</p>
+    </li>
+    <li>
+      <h3>Legal Compliance and Law Enforcement</h3>
+      <p>We may disclose personal data to comply with lawful requests, such as court orders or government investigations. Disclosure is limited to necessary data, and we strive to protect your privacy rights while fulfilling legal obligations.</p>
+    </li>
+    <li>
+      <h3>Use of Data for Service Improvements</h3>
+      <p>The data collected helps us analyze user behavior, preferences, and system performance to continually improve our service quality. Anonymous aggregated data may be used for research and development purposes without compromising individual privacy.</p>
+    </li>
+    <li>
+      <h3>Participation in Surveys and Feedback</h3>
+      <p>From time to time, we may invite users to participate in surveys or provide feedback. Participation is voluntary, and personal data provided in surveys will be used strictly for the stated research objectives.</p>
+    </li>
+    <li>
+      <h3>Use of Location Data for Service Optimization</h3>
+      <p>Location data collected with consent is used to optimize routes, offer time-relevant support, and provide localized service offers. Location tracking is always subject to your approval and can be disabled through your device or browser settings.</p>
+    </li>
+    <li>
+      <h3>Privacy Settings and Controls</h3>
+      <p>We provide tools and settings that enable you to control your privacy preferences, such as cookie consent and subscription options. Our website includes clear instructions to access and modify these settings easily.</p>
+    </li>
+    <li>
+      <h3>Data Minimization Principles</h3>
+      <p>Bloom Nest adheres to data minimization by collecting only data necessary for intended purposes. We avoid excess collection and routinely review data holdings to remove redundant or outdated information.</p>
+    </li>
+    <li>
+      <h3>Access to Personal Information</h3>
+      <p>You may request access to your personal information held by Bloom Nest. Requests are processed promptly, with verifications to protect privacy and prevent unauthorized access by third parties.</p>
+    </li>
+    <li>
+      <h3>Correction and Updating of Data</h3>
+      <p>If you identify inaccuracies or changes in your personal information, you may request corrections. Keeping data accurate helps us provide better, personalized services while safeguarding your rights.</p>
+    </li>
+    <li>
+      <h3>Data Portability Rights</h3>
+      <p>Where applicable, you may request portability of your personal data in a commonly used, machine-readable format. Bloom Nest supports data portability respecting legal and security constraints.</p>
+    </li>
+    <li>
+      <h3>Automated Decision Making and Profiling</h3>
+      <p>We do not use automated decision making or profiling that significantly affects users without explicit informed consent, except when necessary for optimizing service delivery or compliance obligations.</p>
+    </li>
+    <li>
+      <h3>Use of SSL and HTTPS Technologies</h3>
+      <p>Our site employs SSL certificates ensuring encrypted communication between your browser and our servers. This technology protects your data from interferences and hijacking during transmission.</p>
+    </li>
+    <li>
+      <h3>Handling Cookies and Opt-Out Information</h3>
+      <p>We provide clear information regarding our use of cookies and related technologies. You can opt out or customize preferences through banners, browser settings, or contacting us directly for assistance.</p>
+    </li>
+    <li>
+      <h3>Third-Party Links Disclaimer</h3>
+      <p>Our website may contain links to third-party websites or services. Bloom Nest does not control these sites and is not responsible for their privacy practices or content. We encourage reviewing third-party privacy statements before sharing personal data.</p>
+    </li>
+    <li>
+      <h3>Contacting Us About Privacy</h3>
+      <p>If you have questions, concerns, or requests related to your privacy, please contact our dedicated privacy support team at info@bloomnestirrigation.com or phone +1 (555) 123-4567. We aim to respond promptly and thoroughly to all inquiries.</p>
+    </li>
+    <li>
+      <h3>Updates to Privacy Policies Notification</h3>
+      <p>Changes to this policy will be posted on this page, and we may notify users via email or website announcements. We encourage ongoing review to stay informed about how we protect your data.</p>
+    </li>
+    <li>
+      <h3>International Users and GDPR Compliance</h3>
+      <p>Users from the European Union are entitled to rights under GDPR. Bloom Nest complies with GDPR requirements including data access, correction, erasure, and breach notification obligations.</p>
+    </li>
+    <li>
+      <h3>California Consumer Privacy Act (CCPA) Rights</h3>
+      <p>California residents have rights under CCPA such as obtaining information on data collection, deletion requests, and opt-out of sale of personal data – which Bloom Nest fully supports and implements.</p>
+    </li>
+    <li>
+      <h3>Data Protection Officer Contact</h3>
+      <p>For detailed privacy inquiries, a designated Data Protection Officer (DPO) is available to address concerns and ensure compliance with privacy regulations. Please reach out at privacy@bloomnestirrigation.com.</p>
+    </li>
+    <li>
+      <h3>Children’s Online Privacy Protection Act (COPPA) Compliance</h3>
+      <p>Bloom Nest maintains compliance with COPPA in processing data from children under 13. We restrict data collection and require parental consent for any child user engagement.</p>
+    </li>
+    <li>
+      <h3>User Consent Management</h3>
+      <p>Consent for collecting and processing personal data is obtained clearly and transparently. Users can withdraw consent at any time and manage preferences through our privacy tools or support channels.</p>
+    </li>
+    <li>
+      <h3>Use of Personal Data in Marketing</h3>
+      <p>Marketing communications are only sent to users who have explicitly opted in. We respect users’ communication preferences and provide simple unsubscribe options on all correspondence.</p>
+    </li>
+    <li>
+      <h3>Information Retention Timeframes</h3>
+      <p>Personal information is retained only as long as necessary to fulfill business needs, comply with legal obligations, or resolve disputes. Data is securely destroyed or anonymized beyond retention periods.</p>
+    </li>
+    <li>
+      <h3>Use of Biometric or Sensitive Data</h3>
+      <p>Bloom Nest does not collect biometric data or other sensitive personal information. We focus solely on data related to service provision and user interaction with appropriate consents.</p>
+    </li>
+    <li>
+      <h3>Policy Applicability Scope</h3>
+      <p>This policy applies to data collected through Bloom Nest websites, mobile apps, and offline interactions such as service agreements and customer support. Different platforms may have supplementary policies where indicated.</p>
+    </li>
+    <li>
+      <h3>Security Incident Response Measures</h3>
+      <p>In the event of a security incident, we have a comprehensive response plan in place including investigation, mitigation, and communication with affected individuals and authorities as required by laws.</p>
+    </li>
+    <li>
+      <h3>Data Access Requests and Verification</h3>
+      <p>User requests to access personal information are processed with confirmation of identity to prevent unauthorized disclosures. Requests are fulfilled promptly within regulatory timeframes.</p>
+    </li>
+    <li>
+      <h3>Third-Party Data Processing Agreements</h3>
+      <p>All third parties involved in personal data processing sign data processing agreements that define privacy obligations and compliance with applicable laws to ensure secure handling.</p>
+    </li>
+    <li>
+      <h3>Employee Training and Awareness</h3>
+      <p>Our staff undergo regular privacy and security training to maintain awareness of data protection responsibilities and best practices for handling personal information.</p>
+    </li>
+    <li>
+      <h3>Use of Encryption Technologies</h3>
+      <p>Encryption is utilized both in transit and at rest for sensitive data to provide robust protection and prevent unauthorized access or data leaks.</p>
+    </li>
+    <li>
+      <h3>Policy Review and Approval</h3>
+      <p>Bloom Nest Privacy Policy is reviewed and approved by senior management and legal advisors periodically to ensure up-to-date compliance and best practices adherence.</p>
+    </li>
+    <li>
+      <h3>Security Audits and Continuous Improvement</h3>
+      <p>Regular security audits are conducted to test and improve our data protection measures. Feedback and findings are integrated into operational improvements and risk mitigation strategies.</p>
+    </li>
+    <li>
+      <h3>User Education and Awareness</h3>
+      <p>We provide resources and guidance to educate users about protecting their personal information and recognizing potential privacy risks during online interactions.</p>
+    </li>
+    <li>
+      <h3>Retention of Logs and Metadata</h3>
+      <p>Non-personal logs and metadata such as website analytics are retained to improve services but are anonymized to prevent identification of individuals.</p>
+    </li>
+    <li>
+      <h3>Third-Party Widgets and Plugins</h3>
+      <p>Some website features use third-party widgets that may collect data independently. Users are encouraged to review their privacy policies for transparency.</p>
+    </li>
+    <li>
+      <h3>Policy Contact Information</h3>
+      <p>For any privacy questions or concerns, users can reach out via info@bloomnestirrigation.com or call +1 (555) 123-4567 for personal assistance.</p>
+    </li>
+    <li>
+      <h3>Effective Date of Privacy Policy</h3>
+      <p>This Privacy Policy is effective as of January 1, 2025. Continued use of our site indicates acceptance of the latest version.</p>
+    </li>
+  </ol>
+</main>
+
+<footer role="contentinfo" id="contact">
+  <div class="footer-container">
+    <div class="footer-section" aria-label="Contact Information">
+      <h3>Contact Us</h3>
+      <address class="address" tabindex="0">
+        Bloom Nest Irrigation<br />
+        E110 W 3rd St,<br />
+        New York, NY 10012, USA
+      </address>
+      <p>Email: <a href="mailto:info@bloomnestirrigation.com">info@bloomnestirrigation.com</a></p>
+      <p>Phone: <a href="tel:+1-555-123-4567">+1 (555) 123-4567</a></p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
+

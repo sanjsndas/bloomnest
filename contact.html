@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bloom Nest Irrigation Services - Contact Us</title>
+<style>
+  /* Import Google Fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Poppins:wght@400;600&display=swap');
+
+  /* CSS Reset */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body, h1, h2, h3, p, ul, ol, li, figure, form {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #f0fbff;
+    color: #374151;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+  a {
+    color: #0f766e;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover, a:focus {
+    color: #14b8a6;
+    outline: none;
+  }
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  header {
+    position: sticky;
+    top: 0;
+    background: #e0f7fa;
+    backdrop-filter: saturate(180%) blur(10px);
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,128,127,0.1);
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+  .logo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 1.75rem;
+    background: linear-gradient(90deg, #0f766e, #14b8a6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    user-select: none;
+  }
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    font-weight: 600;
+    flex-wrap: wrap;
+  }
+  .nav-links a {
+    font-size: 1rem;
+    padding: 8px 0;
+    position: relative;
+  }
+  .nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: #14b8a6;
+    transition: width 0.3s ease;
+  }
+  .nav-links a:hover::after,
+  .nav-links a:focus::after {
+    width: 100%;
+  }
+  .hero {
+    background: linear-gradient(135deg, #d2f4f0 0%, #86e3d9 100%);
+    padding: 96px 0 80px;
+    text-align: center;
+    box-shadow: inset 0 0 80px rgba(20, 184, 166, 0.15);
+  }
+  .hero h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 3.5rem;
+    color: #064e43;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+  .hero p {
+    font-size: 1.2rem;
+    color: #175d4e;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 32px;
+  }
+  main {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+  .contact-container {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 24px;
+  }
+  h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #0f766e;
+  }
+  h2 {
+    font-weight: 800;
+    font-size: 2.5rem;
+    margin-bottom: 32px;
+    text-align: center;
+  }
+  h3 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-top: 42px;
+    margin-bottom: 16px;
+  }
+  p, li {
+    font-size: 1.125rem;
+    color: #374151;
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
+  ol {
+    padding-left: 1.5rem;
+  }
+  li {
+    margin-bottom: 20px;
+  }
+  /* Contact form styles */
+  form {
+    background: #ffffffcc;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 12px 28px rgba(18, 184, 156, 0.12);
+    max-width: 600px;
+    margin: 32px auto 0 auto;
+  }
+  label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #065f56;
+  }
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #a7c1bd;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+  }
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  textarea:focus {
+    border-color: #12b89c;
+    outline: none;
+  }
+  textarea {
+    min-height: 140px;
+  }
+  button[type="submit"] {
+    background: linear-gradient(90deg, #08918c, #12b89c);
+    color: white;
+    font-weight: 700;
+    padding: 16px 40px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.125rem;
+    box-shadow: 0 8px 20px rgba(18, 184, 156, 0.5);
+    transition: background 0.3s ease, transform 0.25s ease;
+  }
+  button[type="submit"]:hover,
+  button[type="submit"]:focus {
+    background: linear-gradient(90deg, #12b89c, #08918c);
+    transform: translateY(-3px);
+    outline: none;
+  }
+  footer {
+    background: #064e43;
+    color: #d0f1ec;
+    padding: 48px 24px 32px;
+    font-size: 0.95rem;
+  }
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .footer-section {
+    flex: 1 1 240px;
+  }
+  .footer-section h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 14px;
+    color: #a7dedb;
+  }
+  .footer-section p, .footer-section address {
+    line-height: 1.4;
+  }
+  .address {
+    font-style: normal;
+    white-space: pre-line;
+  }
+  @media (max-width: 767px) {
+    .nav-links {
+      display: none;
+    }
+    nav {
+      justify-content: space-between;
+    }
+    main {
+      padding: 32px 8px;
+    }
+    form {
+      padding: 24px;
+      margin-top: 24px;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    main {
+      padding: 48px 16px;
+    }
+  }
+  @media (min-width: 1024px) {
+    main {
+      padding: 64px 24px;
+    }
+  }
+</style>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+<body>
+<header role="banner">
+  <div class="container">
+    <nav aria-label="Primary navigation">
+      <a href="index.html" class="logo" aria-label="Bloom Nest Irrigation Home">Bloom Nest</a>
+      <div class="nav-links" role="navigation" aria-label="Main navigation">
+       <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0"aria-current="page">Contact us</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" role="region" aria-label="Contact Introduction">
+  <div class="container">
+    <h1>Contact Bloom Nest Irrigation</h1>
+    <p>We are here to assist you! Reach out with questions, service inquiries, or feedback using the form below or the contact details provided.</p>
+  </div>
+</section>
+
+<main role="main" class="container contact-container" tabindex="-1" aria-label="Contact Page Content">
+
+  <form action="#" method="POST" aria-label="Contact form">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="name" required placeholder="Your full name" />
+
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" required placeholder="you@example.com" />
+
+    <label for="phone">Phone Number</label>
+    <input type="text" id="phone" name="phone" placeholder="Optional" />
+
+    <label for="message">Your Message</label>
+    <textarea id="message" name="message" required placeholder="Write your message here"></textarea>
+
+    <button type="submit" aria-label="Send your message">Send Message</button>
+  </form>
+
+  <h2 style="margin-top: 48px; text-align: center; color: #0f766e;">Detailed Information and FAQs</h2>
+  <ol>
+    <li>
+      <h3>General Inquiries</h3>
+      <p>Here at Bloom Nest, we welcome all types of general inquiries related to our irrigation services, pricing, and consultation process. Feel free to reach out anytime to gather comprehensive information about how we can assist you with your irrigation needs.</p>
+    </li>
+    <li>
+      <h3>Scheduling Services</h3>
+      <p>Booking an appointment or scheduling a service visit is streamlined through our contact points. We ensure prompt responses and flexible scheduling to match your availability and system requirements.</p>
+    </li>
+    <li>
+      <h3>Consultation Requests</h3>
+      <p>Our expert consultants provide personalized irrigation advice tailored to your land’s specifics. Contact us to arrange consultations that analyze water usage and optimize irrigation setups.</p>
+    </li>
+    <li>
+      <h3>Technical Support</h3>
+      <p>We offer ongoing technical support and troubleshooting assistance. Contact us with system issues or maintenance questions, and our technicians will provide professional guidance and solutions.</p>
+    </li>
+    <li>
+      <h3>Customer Feedback</h3>
+      <p>Your feedback helps us continuously improve our services. Use the contact form to share testimonials, concerns, or suggestions. We value your voice and strive to provide exceptional service.</p>
+    </li>
+    <li>
+      <h3>Billing Questions</h3>
+      <p>For inquiries regarding invoices, payment options, or billing discrepancies, our customer service team is available to clarify and assist with all financial queries related to our irrigation services.</p>
+    </li>
+    <li>
+      <h3>After-Hours Contact</h3>
+      <p>If you have urgent irrigation issues outside of our usual business hours, please contact our emergency support line. We are committed to ensuring your systems operate reliably at all times.</p>
+    </li>
+    <li>
+      <h3>Service Area Coverage</h3>
+      <p>Bloom Nest provides services predominantly within the New York metropolitan area. For inquiries outside this region, contact us for information about potential service availability or referrals.</p>
+    </li>
+    <li>
+      <h3>Corporate Partnerships</h3>
+      <p>We collaborate with businesses and property managers to provide large-scale irrigation solutions. Contact us to explore partnership opportunities and custom service agreements.</p>
+    </li>
+    <li>
+      <h3>Environmental Initiatives</h3>
+      <p>Learn about our commitment to sustainability and water conservation. Contact us for details on environmentally friendly irrigation systems and programs tailored for eco-conscious clients.</p>
+    </li>
+    <li>
+      <h3>New Customer Onboarding</h3>
+      <p>We welcome new customers with personalized onboarding to understand their irrigation needs. Contact us to start a hassle-free engagement process with the experts at Bloom Nest.</p>
+    </li>
+    <li>
+      <h3>Referral Programs</h3>
+      <p>Refer a friend or neighbor and benefit from our referral incentives. Contact our customer relations team to learn how you can participate and earn rewards.</p>
+    </li>
+    <li>
+      <h3>Service Customization</h3>
+      <p>Discuss your unique irrigation requirements with our specialists. We customize solutions, considering landscape size, plant types, and water efficiency goals.</p>
+    </li>
+    <li>
+      <h3>Water Conservation Tips</h3>
+      <p>Request detailed guidance on conserving water with irrigation best practices. Our team provides actionable tips to reduce your water footprint while maintaining lush landscapes.</p>
+    </li>
+    <li>
+      <h3>Seasonal Maintenance Plans</h3>
+      <p>Contact us to learn about seasonal maintenance schedules ensuring your irrigation systems operate efficiently year-round, minimizing costly repairs and downtime.</p>
+    </li>
+    <li>
+      <h3>Warranty and Service Guarantees</h3>
+      <p>Inquire about warranties on installation and equipment. We stand behind our work and provide guarantees to ensure your confidence in our services.</p>
+    </li>
+    <li>
+      <h3>Obtaining Service Quotes</h3>
+      <p>Request a detailed service quote for your specific project. Our estimates are transparent, competitive, and tailored to your irrigation needs.</p>
+    </li>
+    <li>
+      <h3>Product Information</h3>
+      <p>Learn about the irrigation equipment and technologies we use. Contact us for product demonstrations, specifications, and compatibility information.</p>
+    </li>
+    <li>
+      <h3>Maintenance Service Scheduling</h3>
+      <p>Schedule routine check-ups to prolong system life and optimize performance. Our team makes maintenance simple and effective.</p>
+    </li>
+    <li>
+      <h3>Emergency Repair Services</h3>
+      <p>For urgent system failures or leaks, contact our emergency repair hotline. Prompt response minimizes damage and water loss.</p>
+    </li>
+    <li>
+      <h3>Billing and Payment Options</h3>
+      <p>Discuss flexible payment methods and plans available. We aim to accommodate your budget and preferences.</p>
+    </li>
+    <li>
+      <h3>Cancellation Policy</h3>
+      <p>Understand our cancellation terms for scheduled services. We ask for advance notice to manage scheduling effectively.</p>
+    </li>
+    <li>
+      <h3>Feedback and Complaints</h3>
+      <p>Your feedback is valuable. Report issues or complaints via contact methods, and expect responsive follow-up aimed at resolution.</p>
+    </li>
+    <li>
+      <h3>Corporate Social Responsibility</h3>
+      <p>Learn about Bloom Nest’s community involvement and eco-friendly initiatives. Engage with us to participate in sustainability programs.</p>
+    </li>
+    <li>
+      <h3>FAQs and Resources</h3>
+      <p>We provide answers to common questions and educational content. Contact us for further assistance if your query isn't covered.</p>
+    </li>
+    <li>
+      <h3>Technical Documentation Requests</h3>
+      <p>Request manuals, guides, or technical documentation related to your irrigation system for your records or troubleshooting.</p>
+    </li>
+    <li>
+      <h3>Service Area and Availability</h3>
+      <p>Confirm coverage of your geographic location within our service area. We continuously expand to serve more communities.</p>
+    </li>
+    <li>
+      <h3>Vendor and Supplier Inquiries</h3>
+      <p>Potential vendors are encouraged to contact us to explore business opportunities and partnerships.</p>
+    </li>
+    <li>
+      <h3>Career Opportunities</h3>
+      <p>Explore job openings and career paths at Bloom Nest Irrigation. Contact HR for applications and recruitment information.</p>
+    </li>
+    <li>
+      <h3>Media Relations</h3>
+      <p>Media professionals can contact us for interviews, press releases, and company information.</p>
+    </li>
+    <li>
+      <h3>Corporate Governance</h3>
+      <p>Learn about our corporate governance, ethical standards, and transparency policies.</p>
+    </li>
+    <li>
+      <h3>Site Accessibility and Assistance</h3>
+      <p>Contact us for support if you experience any issues navigating our website or require accessibility accommodations.</p>
+    </li>
+    <li>
+      <h3>Data Protection Requests</h3>
+      <p>Exercise your rights regarding personal data, including access, correction, or deletion requests, by contacting us directly.</p>
+    </li>
+    <li>
+      <h3>Advertising and Sponsorship</h3>
+      <p>Inquire about advertising opportunities or sponsorship with Bloom Nest Irrigation.</p>
+    </li>
+    <li>
+      <h3>Event and Workshop Inquiries</h3>
+      <p>Contact us regarding participation or hosting of irrigation-related events, educational workshops, and seminars.</p>
+    </li>
+    <li>
+      <h3>Partnership and Collaboration</h3>
+      <p>We welcome collaboration with environmental groups, industry partners, and educational institutions.</p>
+    </li>
+    <li>
+      <h3>Custom Project Requests</h3>
+      <p>Discuss bespoke irrigation solutions tailored specifically for complex or large-scale projects with our design team.</p>
+    </li>
+    <li>
+      <h3>Contract Review and Negotiation</h3>
+      <p>Contact our customer service team to review service contracts or negotiate terms as needed before engagement.</p>
+    </li>
+    <li>
+      <h3>Data Privacy Concerns</h3>
+      <p>Your privacy concerns are taken seriously. Reach out for clarifications or to report potential data privacy issues.</p>
+    </li>
+    <li>
+      <h3>Technical Innovation Suggestions</h3>
+      <p>We value innovative ideas. Share your suggestions for improving our irrigation technologies or services.</p>
+    </li>
+    <li>
+      <h3>Service Feedback Surveys</h3>
+      <p>Participate in surveys to help us improve. Your input influences service enhancements and customer experience upgrades.</p>
+    </li>
+    <li>
+      <h3>Affiliate and Referral Programs</h3>
+      <p>Learn how to join our affiliate or referral programs and benefit from sharing our services with your network.</p>
+    </li>
+    <li>
+      <h3>Billing Disputes</h3>
+      <p>Report any discrepancies or concerns about billing. We aim to resolve disputes fairly and promptly.</p>
+    </li>
+    <li>
+      <h3>Service Enhancements Notifications</h3>
+      <p>Stay informed about service updates, technology upgrades, and new offerings by staying in touch via contact channels.</p>
+    </li>
+    <li>
+      <h3>Warranty and Guarantee Details</h3>
+      <p>Contact us to understand the warranties and guarantees relating to installations and products we provide.</p>
+    </li>
+    <li>
+      <h3>Emergency Services Information</h3>
+      <p>Information on emergency irrigation repairs is available upon request. Make sure you have our contact info handy for urgent situations.</p>
+    </li>
+    <li>
+      <h3>Payment Plan Options</h3>
+      <p>We offer flexible payment plans for qualifying customers. Contact our finance department for eligibility and terms.</p>
+    </li>
+    <li>
+      <h3>Product Recalls and Notices</h3>
+      <p>Receive notifications about product recalls or safety notices relevant to your irrigation system components.</p>
+    </li>
+  </ol>
+</main>
+
+<footer role="contentinfo" id="contact">
+  <div class="footer-container">
+    <div class="footer-section" aria-label="Contact Information">
+      <h3>Contact Us</h3>
+      <address class="address" tabindex="0">
+        Bloom Nest Irrigation<br />
+        E110 W 3rd St,<br />
+        New York, NY 10012, USA
+      </address>
+      <p>Email: <a href="mailto:info@bloomnestirrigation.com">info@bloomnestirrigation.com</a></p>
+      <p>Phone: <a href="tel:+1-555-123-4567">+1 (555) 123-4567</a></p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
+

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bloom Nest Irrigation Services - Terms & Conditions</title>
+<style>
+  /* Import Google Fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Poppins:wght@400;600&display=swap');
+
+  /* CSS Reset */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body, h1, h2, h3, p, ul, ol, li, figure {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #f0fbff;
+    color: #374151;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+  a {
+    color: #0f766e;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover, a:focus {
+    color: #14b8a6;
+    outline: none;
+  }
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  header {
+    position: sticky;
+    top: 0;
+    background: #e0f7fa;
+    backdrop-filter: saturate(180%) blur(10px);
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,128,127,0.1);
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+  .logo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 1.75rem;
+    background: linear-gradient(90deg, #0f766e, #14b8a6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    user-select: none;
+  }
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    font-weight: 600;
+    flex-wrap: wrap;
+  }
+  .nav-links a {
+    font-size: 1rem;
+    padding: 8px 0;
+    position: relative;
+  }
+  .nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: #14b8a6;
+    transition: width 0.3s ease;
+  }
+  .nav-links a:hover::after,
+  .nav-links a:focus::after {
+    width: 100%;
+  }
+  .hero {
+    background: linear-gradient(135deg, #d2f4f0 0%, #86e3d9 100%);
+    padding: 96px 0 80px;
+    text-align: center;
+    box-shadow: inset 0 0 80px rgba(20, 184, 166, 0.15);
+  }
+  .hero h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 3.5rem;
+    color: #064e43;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+  .hero p {
+    font-size: 1.2rem;
+    color: #175d4e;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 32px;
+  }
+  main {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+  .terms-container {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 24px;
+  }
+  h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #0f766e;
+  }
+  h2 {
+    font-weight: 800;
+    font-size: 2.5rem;
+    margin-bottom: 32px;
+    text-align: center;
+  }
+  h3 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-top: 42px;
+    margin-bottom: 16px;
+  }
+  p, li {
+    font-size: 1.125rem;
+    color: #374151;
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
+  ol {
+    padding-left: 1.5rem;
+  }
+  li {
+    margin-bottom: 20px;
+  }
+  footer {
+    background: #064e43;
+    color: #d0f1ec;
+    padding: 48px 24px 32px;
+    font-size: 0.95rem;
+  }
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .footer-section {
+    flex: 1 1 240px;
+  }
+  .footer-section h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 14px;
+    color: #a7dedb;
+  }
+  .footer-section p, .footer-section address {
+    line-height: 1.4;
+  }
+  .address {
+    font-style: normal;
+    white-space: pre-line;
+  }
+  @media (max-width: 767px) {
+    .nav-links {
+      display: none;
+    }
+    nav {
+      justify-content: space-between;
+    }
+    main {
+      padding: 32px 8px;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    main {
+      padding: 48px 16px;
+    }
+  }
+  @media (min-width: 1024px) {
+    main {
+      padding: 64px 24px;
+    }
+  }
+</style>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+<body>
+<header role="banner">
+  <div class="container">
+    <nav aria-label="Primary navigation">
+      <a href="index.html" class="logo" aria-label="Bloom Nest Irrigation Home">Bloom Nest</a>
+      <div class="nav-links" role="navigation" aria-label="Main navigation">
+     <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0"aria-current="page">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" role="region" aria-label="Terms and Conditions Introduction">
+  <div class="container">
+    <h1>Terms & Conditions</h1>
+    <p>Please read these Terms & Conditions carefully before using the services of Bloom Nest Irrigation. They govern your use of our website and services.</p>
+  </div>
+</section>
+
+<main role="main" class="container terms-container" tabindex="-1" aria-label="Detailed Terms and Conditions Content">
+  <h2>Terms & Conditions - Detailed Overview</h2>
+  <ol>
+    <li>
+      <h3>Acceptance of Terms</h3>
+      <p>By accessing or using Bloom Nest Irrigation services and website, you agree to be bound by these Terms & Conditions. If you do not agree, please do not use our services. These terms may be updated regularly, and your continued use constitutes your acceptance of changes.</p>
+    </li>
+    <li>
+      <h3>Service Description</h3>
+      <p>Bloom Nest Irrigation provides irrigation system installation, maintenance, and consulting services. All descriptions and prices are subject to change. We strive for accuracy but do not guarantee that all descriptions or prices are error-free or up to date.</p>
+    </li>
+    <li>
+      <h3>Eligibility</h3>
+      <p>You must be at least 18 years old or have legal parental or guardian consent to use our services or website. By agreeing, you represent that you have the legal capacity to enter into these terms.</p>
+    </li>
+    <li>
+      <h3>Account Registration</h3>
+      <p>If you create an account, you are responsible for maintaining confidentiality of your login credentials and activity. You agree to notify us immediately of any unauthorized use of your account.</p>
+    </li>
+    <li>
+      <h3>Use Restrictions</h3>
+      <p>You agree not to misuse our services, including but not limited to unauthorized access, transmitting harmful data, or violating applicable laws. Violation may result in suspension or termination of your access.</p>
+    </li>
+    <li>
+      <h3>Service Pricing and Payment</h3>
+      <p>Prices are provided upfront, but may be subject to change with notice. Payment terms will be agreed upon during service engagement. We accept payments through specified methods; failure to pay may result in service interruptions.</p>
+    </li>
+    <li>
+      <h3>Service Modifications</h3>
+      <p>We reserve the right to modify or discontinue services temporarily or permanently without notice. We will strive to notify customers promptly and assist with transitions or alternatives.</p>
+    </li>
+    <li>
+      <h3>Customer Responsibilities</h3>
+      <p>Customers agree to provide accurate information needed for services, ensure site access, and comply with local regulations. Failure to do so may impact service quality or cause delays.</p>
+    </li>
+    <li>
+      <h3>Limited Warranties</h3>
+      <p>Services are provided "as is" without warranties of any kind, except where mandated by law. We warrant workmanship standards but do not guarantee specific water savings or plant health outcomes.</p>
+    </li>
+    <li>
+      <h3>Limitation of Liability</h3>
+      <p>Bloom Nest Irrigation shall not be liable for indirect, incidental, or consequential damages arising from service use. Our total liability is limited to the amount you paid for services.</p>
+    </li>
+    <!-- Points 11 - 45 with detailed explanations -->
+    <li>
+      <h3>Intellectual Property</h3>
+      <p>All content, trademarks, logos, and designs on our website and materials are owned by Bloom Nest Irrigation or its licensors and protected by intellectual property laws. Unauthorized use is prohibited.</p>
+    </li>
+    <li>
+      <h3>User-Generated Content</h3>
+      <p>Any feedback or content you submit to us grants us license to use, reproduce, modify, and display such content for commercial or promotional purposes without compensation, respecting your rights.</p>
+    </li>
+    <li>
+      <h3>Privacy Policy</h3>
+      <p>Our Privacy Policy describes how we collect and use your personal data. By accepting these terms, you agree to our Privacy Policy and data practices as outlined therein.</p>
+    </li>
+    <li>
+      <h3>Third-Party Links and Services</h3>
+      <p>Our service may link to third-party websites or services which are not controlled by us. We are not responsible for their content or practices. Use such services at your own risk.</p>
+    </li>
+    <li>
+      <h3>Service Termination</h3>
+      <p>We may terminate or suspend your access to services without notice for violations of terms or legal reasons. Termination does not limit our rights to pursue remedies legally.</p>
+    </li>
+    <li>
+      <h3>Force Majeure</h3>
+      <p>Bloom Nest Irrigation is not liable for delays or failures due to causes beyond our reasonable control, including natural disasters, government actions, or internet disruptions.</p>
+    </li>
+    <li>
+      <h3>Dispute Resolution</h3>
+      <p>Any disputes arising from these terms will be handled by binding arbitration in accordance with local laws. You waive the right to participate in class action lawsuits.</p>
+    </li>
+    <li>
+      <h3>Governing Law</h3>
+      <p>These Terms & Conditions are governed by the laws of the state of New York, USA, without regard to conflict of law principles.</p>
+    </li>
+    <li>
+      <h3>Entire Agreement</h3>
+      <p>These terms constitute the entire agreement between you and Bloom Nest Irrigation regarding the services. Any prior agreements are superseded by these terms.</p>
+    </li>
+    <li>
+      <h3>Severability</h3>
+      <p>If any provision is determined invalid, illegal, or unenforceable, the remainder of the terms shall remain unaffected and enforceable to the fullest extent possible.</p>
+    </li>
+    <li>
+      <h3>Waivers</h3>
+      <p>Failure to enforce any provision is not a waiver of future enforcement. Any waiver must be explicit and in writing.</p>
+    </li>
+    <li>
+      <h3>Modification of Terms</h3>
+      <p>We reserve the right to modify these terms at any time. Notice will be provided via our website or direct communication. Continued use constitutes acceptance of changes.</p>
+    </li>
+    <li>
+      <h3>Service Availability</h3>
+      <p>We strive for high availability but do not guarantee uninterrupted service. Scheduled maintenance or unforeseen issues may result in temporary service interruptions without liability.</p>
+    </li>
+    <li>
+      <h3>Customer Feedback</h3>
+      <p>We welcome feedback to improve our services. Submission of feedback does not guarantee implementation but is appreciated and reviewed regularly.</p>
+    </li>
+    <li>
+      <h3>Payment Terms</h3>
+      <p>Payments must be made as agreed in service contracts. Late payments may incur interest or service suspension until payment is made.</p>
+    </li>
+    <li>
+      <h3>Refund Policy</h3>
+      <p>Refunds are granted only as explicitly stated in service agreements or required by law. Please contact support for any refund requests or complaints.</p>
+    </li>
+    <li>
+      <h3>Indemnification</h3>
+      <p>You agree to indemnify and hold harmless Bloom Nest Irrigation from any claims, damages, or expenses arising from your breach of these terms or misuse of our services.</p>
+    </li>
+    <li>
+      <h3>Copyright Complaints</h3>
+      <p>If you believe your copyright is infringed by content on our site, please notify us promptly with details so we can investigate and take appropriate action.</p>
+    </li>
+    <li>
+      <h3>Restrictions on Use</h3>
+      <p>You must not use our services for unlawful purposes, spam, or activities that disrupt other users or systems.</p>
+    </li>
+    <li>
+      <h3>Liability for Content</h3>
+      <p>Bloom Nest Irrigation is not responsible for user-generated content or third-party material and does not guarantee accuracy or completeness of posted content.</p>
+    </li>
+    <li>
+      <h3>Disclaimers</h3>
+      <p>All services and information are provided without warranty of any kind. We disclaim all implied warranties including merchantability and fitness for a particular purpose.</p>
+    </li>
+    <li>
+      <h3>Limitation of Liability</h3>
+      <p>Our liability in any claim related to these terms is limited to direct damages not exceeding the amount paid by you for services in the last 12 months.</p>
+    </li>
+    <li>
+      <h3>Data Protection Compliance</h3>
+      <p>We comply with applicable data protection laws ensuring your information is handled lawfully and securely.</p>
+    </li>
+    <li>
+      <h3>User Responsibilities</h3>
+      <p>You must provide accurate information and comply with these terms. Noncompliance may result in termination of services.</p>
+    </li>
+    <li>
+      <h3>Service Feedback and Support</h3>
+      <p>Our customer support is available to address questions and issues. We encourage open communication for resolution and improvement.</p>
+    </li>
+    <li>
+      <h3>Electronic Communications Consent</h3>
+      <p>By using our site, you consent to receive electronic communications related to services, billing, and updates.</p>
+    </li>
+    <li>
+      <h3>License to Use Website</h3>
+      <p>We grant you a limited, non-exclusive license to access and use our website for personal or commercial use consistent with these terms.</p>
+    </li>
+    <li>
+      <h3>Prohibited Activities</h3>
+      <p>Unauthorized attempts to access accounts, misuse of content, or attempting to interfere with the website operation are prohibited and may lead to legal action.</p>
+    </li>
+    <li>
+      <h3>Termination Rights</h3>
+      <p>Either party may terminate service agreements according to contract terms or for cause as described herein.</p>
+    </li>
+    <li>
+      <h3>Communications and Notices</h3>
+      <p>Notices may be provided via email, postal mail, or website postings and are deemed effective upon delivery or posting.</p>
+    </li>
+    <li>
+      <h3>Third-Party Content Disclaimer</h3>
+      <p>We do not endorse or guarantee accuracy of third-party content linked or referenced in our services.</p>
+    </li>
+    <li>
+      <h3>Assignment</h3>
+      <p>Bloom Nest may assign or transfer obligations under these terms without consent. Users may not assign rights without our approval.</p>
+    </li>
+    <li>
+      <h3>Survival</h3>
+      <p>Provisions regarding liability, indemnity, and confidentiality survive termination or expiration of these terms.</p>
+    </li>
+    <li>
+      <h3>Contact Information</h3>
+      <p>If you have questions or concerns about these Terms & Conditions, please contact us at info@bloomnestirrigation.com or call +1 (555) 123-4567.</p>
+    </li>
+  </ol>
+</main>
+
+<footer role="contentinfo" id="contact">
+  <div class="footer-container">
+    <div class="footer-section" aria-label="Contact Information">
+      <h3>Contact Us</h3>
+      <address class="address" tabindex="0">
+        Bloom Nest Irrigation<br />
+        E110 W 3rd St,<br />
+        New York, NY 10012, USA
+      </address>
+      <p>Email: <a href="mailto:info@bloomnestirrigation.com">info@bloomnestirrigation.com</a></p>
+      <p>Phone: <a href="tel:+1-555-123-4567">+1 (555) 123-4567</a></p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
+
